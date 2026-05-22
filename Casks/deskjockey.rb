@@ -1,6 +1,6 @@
 cask "deskjockey" do
-  version "1.1.0"
-  sha256 "1b350813722f18e605dd33d895cd9873b2838df4d8546f5026542005359274c8"
+  version "1.2.0"
+  sha256 "d1cde0e240808472415c8dea216699fa160083534757decd889b4f54170ba582"
 
   url "https://github.com/JeroenvdV/Deskjockey/releases/download/v#{version}/Deskjockey.zip"
   name "Deskjockey"
