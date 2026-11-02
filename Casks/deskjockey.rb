@@ -7,13 +7,12 @@ cask "deskjockey" do
   desc "Menu bar app that saves and restores multi-monitor display arrangements"
   homepage "https://github.com/JeroenvdV/Deskjockey"
 
-  depends_on macos: ">= :ventura"
+  depends_on macos: :ventura
 
   app "Deskjockey.app"
 
-  postflight do
-    system_command "/usr/bin/xattr",
-                   args: ["-cr", "#{appdir}/Deskjockey.app"]
+  postflight_steps do
+    run "/usr/bin/xattr", args: ["-cr", "{{appdir}}/Deskjockey.app"]
   end
 
   zap trash: [
